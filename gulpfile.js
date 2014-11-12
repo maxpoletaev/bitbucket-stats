@@ -6,8 +6,13 @@ var browserify = require('browserify');
 var stream = require('vinyl-source-stream');
 
 var source = {
-  js: ['./client/js/index.js'],
-  css: ['./client/css/*.styl']
+  js: [
+    './client/js/index.js'
+  ],
+  css: [
+    './client/inc/reset.css',
+    './client/css/*.styl'
+  ]
 };
 
 var config = {

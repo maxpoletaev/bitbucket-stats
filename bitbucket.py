@@ -34,10 +34,14 @@ class Bitbucket:
         return self.send_request_v2('repositories/%s' % user)
 
     def get_repo_commits(self, user, repo):
-        return self.send_request_v2('repositories/%s/%s/commits' % (user, repo.lower()))
+        repo_slug = repo['name'] if isinstance(repo, dict) else repo
+        return self.send_request_v2('repositories/%s/%s/commits' % (user, repo_slug.lower()))
 
     def get_commit_diffstat(self, user, repo, commit):
+        repo_slug = repo['name'] if isinstance(repo, dict) else repo
+        commit_hahs = commit['hash'] if isinstance(commit, dict) else commit
+
         diffstat = self.send_request_v1('repositories/%s/%s/changesets/%s/diffstat/'
-            % (user, repo.lower(), commit))
+            % (user, repo_slug.lower(), commit_hahs))
 
         return diffstat

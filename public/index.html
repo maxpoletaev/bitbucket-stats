@@ -2,49 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Team staticstic</title>
   <link rel="stylesheet" href="/assets/css/app.css" />
 </head>
 <body class="page">
 
-  <div class="chart-group">
+  <div class="chart-group -changesets">
     <div class="chart-group_heading">
-      <h2 class="chart-group_heading_main">Неделя</h2>
+      <h2 class="chart-group_heading_main">New lines</h2>
     </div>
-    <div class="chart-group_chart chart">
-      <div class="chart_heading">
-        Количество изменений в файлах
+    <div class="chart-group_charts">
+      <div class="chart-group_chart">
+        <div class="chart">
+          <div class="chart_heading">Week</div>
+          <div class="chart_graph">
+            <canvas class="chart_graph_canvas" id="changesets-week" width="420" height="420"></canvas>
+          </div>
+        </div>
       </div>
-      <div class="chart_graph">
-        <canvas class="chart_graph_canvas" id="week" width="300" height="300"></canvas>
+      <div class="chart-group_chart">
+          <div class="chart">
+            <div class="chart_heading">Month</div>
+            <div class="chart_graph">
+              <canvas class="chart_graph_canvas" id="changesets-month" width="420" height="420"></canvas>
+            </div>
+          </div>
+      </div>
+      <div class="chart-group_chart">
+          <div class="chart">
+            <div class="chart_heading">Year</div>
+            <div class="chart_graph">
+              <canvas class="chart_graph_canvas" id="changesets-year" width="420" height="420"></canvas>
+            </div>
+          </div>
       </div>
     </div>
   </div>
 
-  <div class="chart-group">
+  <div class="chart-group -commits">
     <div class="chart-group_heading">
-      <h2 class="chart-group_heading_main">Месяц</h2>
+      <h2 class="chart-group_heading_main">Commits</h2>
     </div>
-    <div class="chart-group_chart chart">
-      <div class="chart_heading">
-        Количество изменений в файлах
+    <div class="chart-group_charts">
+      <div class="chart-group_chart">
+        <div class="chart">
+          <div class="chart_heading">Week</div>
+          <div class="chart_graph">
+            <canvas class="chart_graph_canvas" id="commits-week" width="420" height="420"></canvas>
+          </div>
+        </div>
       </div>
-      <div class="chart_graph">
-        <canvas class="chart_graph_canvas" id="month" width="300" height="300"></canvas>
+      <div class="chart-group_chart">
+          <div class="chart">
+            <div class="chart_heading">Month</div>
+            <div class="chart_graph">
+              <canvas class="chart_graph_canvas" id="commits-month" width="420" height="420"></canvas>
+            </div>
+          </div>
       </div>
-    </div>
-  </div>
-
-  <div class="chart-group">
-    <div class="chart-group_heading">
-      <h2 class="chart-group_heading_main">Полгода</h2>
-    </div>
-    <div class="chart-group_chart chart">
-      <div class="chart_heading">
-        Количество изменений в файлах
-      </div>
-      <div class="chart_graph">
-        <canvas class="chart_graph_canvas" id="half-year" width="300" height="300"></canvas>
+      <div class="chart-group_chart">
+          <div class="chart">
+            <div class="chart_heading">Year</div>
+            <div class="chart_graph">
+              <canvas class="chart_graph_canvas" id="commits-year" width="420" height="420"></canvas>
+            </div>
+          </div>
       </div>
     </div>
   </div>
