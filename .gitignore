@@ -1,0 +1,6 @@
+__pycache__/
+node_modules/
+public/assets/
+npm-debug.log
+settings.py
+*.db
