@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     _.each(stats, function(stat, user) {
       chart.addData({
-        value: stat.added,
+        value: stat.added - stat.removed,
         color: colors[i++],
         label: user
       });
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     _.each(stats, function(stat, user) {
       chart.addData({
-        value: stat.added,
+        value: stat.added - stat.removed,
         color: colors[i++],
         label: user
       });
@@ -69,7 +69,7 @@ $(document).ready(function() {
 
     _.each(stats, function(stat, user) {
       chart.addData({
-        value: stat.added,
+        value: stat.added - stat.removed,
         color: colors[i++],
         label: user
       });
